@@ -6,9 +6,8 @@
     xmlns:local="clr-namespace:Weather">
 
     <StackLayout>
-        <!--  Place new controls here  -->
         <Label
-            Text="Welcome to Xamarin.Forms!"
+            Text="Welcome"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand" />
     </StackLayout>
