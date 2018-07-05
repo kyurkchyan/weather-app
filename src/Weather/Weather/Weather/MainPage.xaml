@@ -6,10 +6,9 @@
     xmlns:local="clr-namespace:Weather">
 
     <StackLayout>
-        <Label
-            Text="Welcome"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand" />
+        <Entry Placeholder="Username" />
+        <Entry Placeholder="Password" />
+        <Button Text="Login" />
     </StackLayout>
 
 </ContentPage>
