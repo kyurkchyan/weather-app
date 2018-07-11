@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -84,17 +84,25 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Weather\Weather.csproj">
-      <Project>{15B896C9-2952-49B4-A6A8-63704C633054}</Project>
-      <Name>Weather</Name>
+    <ProjectReference Include="..\Weather.Core\Weather.Core.csproj">
+      <Project>{b00fc3f6-c1f0-46af-81fd-2294e81ba137}</Project>
+      <Name>Weather.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.Forms\Weather.Forms.csproj">
+      <Project>{154DCF69-A725-44B8-AB83-2A06A3C0F8A4}</Project>
+      <Name>Weather.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.UI\Weather.UI.csproj">
+      <Project>{97fba603-33c4-47f2-80fa-0c8a93116e91}</Project>
+      <Name>Weather.UI</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

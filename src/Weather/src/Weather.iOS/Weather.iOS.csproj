@@ -151,9 +151,17 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Weather\Weather.csproj">
-      <Project>{15B896C9-2952-49B4-A6A8-63704C633054}</Project>
-      <Name>Weather</Name>
+    <ProjectReference Include="..\Weather.Core\Weather.Core.csproj">
+      <Project>{b00fc3f6-c1f0-46af-81fd-2294e81ba137}</Project>
+      <Name>Weather.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.Forms\Weather.Forms.csproj">
+      <Project>{154DCF69-A725-44B8-AB83-2A06A3C0F8A4}</Project>
+      <Name>Weather.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.UI\Weather.UI.csproj">
+      <Project>{97fba603-33c4-47f2-80fa-0c8a93116e91}</Project>
+      <Name>Weather.UI</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

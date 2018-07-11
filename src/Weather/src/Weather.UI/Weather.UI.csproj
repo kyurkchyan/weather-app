@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
+    <ProjectReference Include="..\Weather.Core\Weather.Core.csproj" />
   </ItemGroup>
+
 </Project>
