@@ -6,9 +6,11 @@
     xmlns:local="clr-namespace:Weather">
 
     <StackLayout>
-        <Entry Placeholder="Username" />
-        <Entry Placeholder="Password" />
-        <Button Text="Login" />
+        <Label
+            Text="{Binding Weather.City.CityName}"
+            TextColor="Black"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center" />
     </StackLayout>
 
 </ContentPage>

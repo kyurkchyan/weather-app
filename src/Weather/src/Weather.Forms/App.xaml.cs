@@ -1,31 +1,36 @@
+using Grace.DependencyInjection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace Weather.Forms
 {
-	public partial class App
-	{
-		public App ()
-		{
-			InitializeComponent();
+    public partial class App
+    {
+        private readonly DependencyInjectionContainer _container;
 
-			MainPage = new MainPage();
-		}
+        public App(DependencyInjectionContainer container)
+        {
+            _container = container;
+            InitializeComponent();
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+            MainPage = new NavigationPage(_container.Locate<MainPage>());
+        }
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }
